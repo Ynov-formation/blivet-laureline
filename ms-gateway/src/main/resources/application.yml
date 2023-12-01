@@ -1,0 +1,33 @@
+server:
+    port: 8888
+spring:
+  application:
+    name: ms-gateway
+  cloud:
+    config:
+        enabled: false
+    discovery:
+        enabled: true
+#    gateway:
+#      routes:
+#        - id: account-service
+#          uri: http://localhost:8084
+#          predicates:
+#            - Path= /account/**
+#        - id: security-service
+#          uri: http://localhost:8089
+#          predicates:
+#            - Path= /auth/**
+#        - id: customer-service
+#          uri: http://localhost:8081
+#          predicates:
+#            - Path= /customer/**
+#        - id: operation-service
+#          uri: http://localhost:8082
+#          predicates:
+#            - Path= /operation/**
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
